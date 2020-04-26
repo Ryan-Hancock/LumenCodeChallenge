@@ -1,0 +1,25 @@
+nginx:
+  build: images/nginx
+  command: nginx -g "daemon off;"
+  links:
+    - php
+  ports:
+    - "8050:80"
+  volumes:
+    - ./project/public:/var/www/html/app/public
+php:
+  build: images/php
+  volumes:
+    - ./project:/var/www/html/app
+  working_dir: /var/www/html/app
+  command: php-fpm
+  ports:
+    - "9000:9000"
+  environment:
+    APP_ENV: local
+    APP_DEBUG: 'true'
+    APP_KEY: SomeRandomKey!!!
+    APP_LOCALE: en
+    APP_FALLBACK_LOCALE: en
+    DB_CONNECTION: sqlite
+    CACHE_DRIVER: file
