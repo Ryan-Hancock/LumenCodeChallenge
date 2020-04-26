@@ -33,6 +33,8 @@ docker-compose down
 
 Configuration values can be changed from the `docker-compose.yml`
 
+Default configuration will start a server at `localhost:8050`
+
 Database using sqlite containing the prepared data from the commodity csv, can be found at `project/database/database.sqlite`
 
 ## API endpoints
