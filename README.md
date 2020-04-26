@@ -39,11 +39,11 @@ Database using sqlite containing the prepared data from the commodity csv, can b
 
 
 ### GET
-showOneCommodity: `/commodity/{id}` br/>
-showAllCommodity: `/commodity` br/>
+showOneCommodity: `/commodity/{id}`  
+showAllCommodity: `/commodity`
 
 ### POST
-createCommodity: `/commodity` br/>
+createCommodity: `/commodity` 
 ```json
 {
   "name": "Example",
@@ -54,7 +54,7 @@ createCommodity: `/commodity` br/>
 ```
 
 ### PUT
-updateCommodity: `/commodity/{id}` br/>
+updateCommodity: `/commodity/{id}`
 ```json
 {
   "segment_id": "10000000"
